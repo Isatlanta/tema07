@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Øvelse 1</title>
+    <style>
+      section {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <hr />
+      <h1>Titel</h1>
+      <hr />
+    </header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="http://placeimg.com/640/480/arch" />
+          <h3>Article 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum,
+            facere ipsum voluptate ut eius ex minus magni repellat sint suscipit
+            amet velit earum mollitia, voluptatum excepturi et eligendi
+            doloremque.
+          </p>
+        </article>
+        <article>
+          <img src="http://placeimg.com/640/480/arch" />
+          <h3>Article 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            et rem. Recusandae modi pariatur autem blanditiis ipsa nesciunt.
+            Laborum debitis aliquam labore suscipit cumque, sapiente temporibus
+            at! Et, reprehenderit obcaecati.
+          </p>
+        </article>
+      </section>
+    </main>
+    <hr />
+    <footer>This is the footer</footer>
+    <hr />
+    <script>
+      const overskrift = document.querySelector("h1");
+
+      overskrift.textContent;
+      console.log(overskrift.textContent);
+      overskrift.textContent = "Ny Overskrift";
+      console.log(overskrift.textContent);
+
+      const undertitel = document.querySelector("h2");
+
+      undertitel.innerHTML;
+      console.log(undertitel).innerHTML;
+      undertitel.innerHTML = "<b>En mindre undertitel</b>";
+      console.log(undertitel.innerHTML);
+    </script>
+  </body>
+</html>

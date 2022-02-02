@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Øvelse 1</title>
+    <style>
+      section {
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <hr />
+      <h1>Titel</h1>
+      <hr />
+    </header>
+    <main>
+      <h2>Undertitel</h2>
+      <section>
+        <article>
+          <img src="http://placeimg.com/640/480/arch" />
+          <h3>Article 1</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non illum,
+            facere ipsum voluptate ut eius ex minus magni repellat sint suscipit
+            amet velit earum mollitia, voluptatum excepturi et eligendi
+            doloremque.
+          </p>
+        </article>
+        <article>
+          <img src="http://placeimg.com/640/480/arch" />
+          <h3>Article 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
+            et rem. Recusandae modi pariatur autem blanditiis ipsa nesciunt.
+            Laborum debitis aliquam labore suscipit cumque, sapiente temporibus
+            at! Et, reprehenderit obcaecati.
+          </p>
+        </article>
+      </section>
+    </main>
+    <hr />
+    <footer>This is the footer</footer>
+    <hr />
+    <script>
+      const overskrift = document.querySelector("h1");
+      // textContent fordi overskriften er kun tekst
+      overskrift.textContent;
+      console.log(overskrift.textContent);
+      // ændrer overskriften til "Ny overskrift"
+      overskrift.textContent = "Ny Overskrift";
+      console.log(overskrift.textContent);
+
+      const undertitel = document.querySelector("h2");
+      // innerHTML fordi det ikke kun er tekst
+      undertitel.innerHTML;
+      console.log(undertitel.innerHTML);
+      // ændrer til en anden undertitel
+      undertitel.innerHTML = "<b>En mindre undertitel</b>";
+      console.log(undertitel.innerHTML);
+
+      //   vælger første billede
+      const billede1 = document.querySelector("article:nth-child(1) img");
+      console.log(billede1);
+      billede1.src = "http://placeimg.com/640/480/nature";
+      billede1.alt = "natur i stedet";
+
+      let mainSection = document.querySelector("section");
+      // nyt article element
+      let newArticle = document.createElement("article");
+      //   Nyt h3 element
+      let h3 = document.createElement("h3");
+      //   tekst til overskriften
+      let overskriftText = document.createTextNode("Article 3");
+      //   indsæt tekst i overskrift
+      h3.appendChild(overskriftText);
+      //  tilføj overskrift til article
+      newArticle.appendChild(h3);
+      //  tilføj article til section
+      mainSection.appendChild(newArticle);
+    </script>
+  </body>
+</html>

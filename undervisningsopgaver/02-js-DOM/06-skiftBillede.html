@@ -88,7 +88,15 @@
 
       document.addEventListener("DOMContentLoaded", start);
       function start() {
-        console.log(alert);
+        console.log("dom er loaded");
+      }
+
+      document.addEventListener("click", skift);
+      function skift() {
+        console.log("skift");
+
+        billede1.src = "http://placeimg.com/640/480/people";
+        billede1.alt = "mennesker i stedet";
       }
     </script>
   </body>

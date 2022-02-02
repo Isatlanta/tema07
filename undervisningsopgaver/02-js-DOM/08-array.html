@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="display">
+      <li>Atrevete</li>
+      <li>Guarida</li>
+      <li>Bichota</li>
+      <li>Vinito chilenito</li>
+      <li>Elefanter</li>
+      <li>The bicycle of the sky</li>
+      <li>Yemaya</li>
+      <li>Do I wanna know</li>
+      <li>Unit delta plus</li>
+      <li>Words remain</li>
+    </ul>
+    <script>
+      const playliste = [
+        "Atrevete",
+        "Guarida",
+        "Bichota",
+        "Vinito chilenito",
+        "Elefanter",
+        "The bicycle of the sky",
+        "Yemaya",
+        "Do I wanna know",
+        "Unit delta plus",
+        "Words remain",
+      ];
+
+      playliste.forEach(
+        (nummer) => (display.innerHTML += "<li>" + nummer + "</li>")
+      );
+    </script>
+  </body>
+</html>

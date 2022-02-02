@@ -58,20 +58,6 @@
       overskrift.textContent = "Ny Overskrift";
       console.log(overskrift.textContent);
 
-      const undertitel = document.querySelector("h2");
-      // innerHTML fordi det ikke kun er tekst
-      undertitel.innerHTML;
-      console.log(undertitel.innerHTML);
-      // ændrer til en anden undertitel
-      undertitel.innerHTML = "<b>En mindre undertitel</b>";
-      console.log(undertitel.innerHTML);
-
-      //   vælger første billede
-      const billede1 = document.querySelector("article:nth-child(1) img");
-      console.log(billede1);
-      billede1.src = "http://placeimg.com/640/480/nature";
-      billede1.alt = "natur i stedet";
-
       let mainSection = document.querySelector("section");
       // nyt article element
       let newArticle = document.createElement("article");
@@ -88,7 +74,20 @@
 
       document.addEventListener("DOMContentLoaded", start);
       function start() {
-        console.log(this);
+        console.log("dom er loaded");
+        const undertitel = document.querySelector("h2");
+        // innerHTML fordi det ikke kun er tekst
+        undertitel.innerHTML;
+        console.log(undertitel.innerHTML);
+        // ændrer til en anden undertitel
+        undertitel.innerHTML = "<b>En mindre undertitel</b>";
+        console.log(undertitel.innerHTML);
+
+        //   ændrer første billede
+        const billede1 = document.querySelector("article:nth-child(1) img");
+        console.log(billede1);
+        billede1.src = "http://placeimg.com/640/480/nature";
+        billede1.alt = "natur i stedet";
       }
     </script>
   </body>
